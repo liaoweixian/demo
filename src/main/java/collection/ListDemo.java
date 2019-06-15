@@ -2,10 +2,7 @@ package collection;
 
 import domain.Student;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 import java.util.function.Predicate;
 
 /**
@@ -17,14 +14,91 @@ import java.util.function.Predicate;
 public class ListDemo {
 
     public static void main(String[] args) {
-        arrayListDemo();
+        //arrayListDemo();
+        //vectorDemo();
+        stackDemo();
     }
 
     /**
-     *
+     * Stack
+     * 1、扩展了Vector类， 多了五个方法， 实现FIFO 先进先出
+     */
+    public static void stackDemo() {
+
+        /**
+         * Constructor
+         * 1、null构造
+         */
+        Stack<Student> students = new Stack<>();
+
+        //将数据放到集合的首位
+        students.push(new Student("又一",1));
+        students.push(new Student("又二",2));
+
+        System.out.println(students);
+        System.out.println(students.empty());
+        System.out.println(students.peek());
+        System.out.println(students.pop());
+        System.out.println(students);
+    }
+
+    /**
+     * Vector
+     * 1、和ArrayList一样，这个是同步的，ArrayList不是同步
      */
     public static void vectorDemo() {
+        Vector<Student> students = new Vector<>();
 
+        /**
+         * Constructor
+         * 1、null构造
+         * 2、以Collection子类实例
+         * 3、初始化容量
+         * 4、指定的初始容量和容量增量的空向量。
+         */
+        Vector<Student> studentsA = new Vector<>();
+        Vector<Student> studentsB = new Vector<>(students);
+        Vector<Student> studentsC = new Vector<>(5);
+        Vector<Student> studentsD = new Vector<>(5, 2);
+
+        //add(E) 在集合的最后添加元素
+        students.add(new Student("又一",1));
+        students.add(new Student("又二",2));
+        students.add(new Student("又三",3));
+        studentsA.add(new Student("又五",5));
+        studentsA.add(new Student("又六",6));
+        students.add(new Student("又六",6));
+
+        //add(index , E) 在指定位置插入元素
+        //插入下班不存在会报下标越界
+        students.add(1, new Student("又四", 4));
+
+        //把整个Collection的集合数据添加到此集合的尾部
+        students.addAll(studentsA);
+
+        //整个Collection的集合数据插入到指定位置
+        students.addAll(0, studentsA);
+
+        //把元素添加到集合末尾
+        students.addElement(new Student("又七",7));
+
+        //查询指定的元素是否存在 使用的是对象的equals进行比较查找
+        boolean bool = students.contains(new Student("又一", 1));
+        System.out.println("contains:" + bool);
+
+        //获取索引处的元素
+        Student student = students.elementAt(0);
+
+        //返回此向量的组件的枚举。
+        Enumeration<Student> elements = students.elements();
+       /* while (elements.hasMoreElements()) {
+            Student student1 = elements.nextElement();
+            System.out.println(student1);
+        }*/
+
+
+        System.out.println(student);
+        System.out.println(students);
     }
 
     /**
