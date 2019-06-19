@@ -3,6 +3,7 @@ package collection;
 import domain.Student;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 /**
  * 1、不包含重复元素e1.equals(e2)
@@ -21,9 +22,26 @@ public class SetDemo {
      *
      */
     public static void linkedHashSetDemo() {
-        //从这里开始
 
+        LinkedHashSet<Student> students = new LinkedHashSet<>();
+
+        /**
+         * Constructor
+         * 1、null构造
+         * 2、Collection子类构造
+         *  * 4、初始容量和加载因子构造
+         * 5、初始容量和负载因子
+         */
+        LinkedHashSet<Student> studentsA = new LinkedHashSet<>();
+        LinkedHashSet<Student> studentsB = new LinkedHashSet<>(students);
+        LinkedHashSet<Student> studentsC = new LinkedHashSet<>(10);
+        LinkedHashSet<Student> studentsD = new LinkedHashSet<>(10, 1);
+
+        /**
+         * 方法和其他set一样的 ， 没有去重写过方法
+         */
     }
+
     /**
      * HashSet
      * 1、由hash表支持
@@ -39,7 +57,7 @@ public class SetDemo {
         /**
          * Constructor
          * 1、null构造
-         * 2、Collection自类构造
+         * 2、Collection子类构造
          * 3、初始容量构造
          * 4、初始容量和加载因子构造
          * 5、底层实现是以是把元素作为HashMap的键来实现
