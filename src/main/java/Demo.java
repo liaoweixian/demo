@@ -9,7 +9,7 @@ public class Demo {
     public static void main(String[] args) {
         //Demo.stringBufferDemo();
         //fileDemo();
-       // pathDemo();
+        // pathDemo();
         //arraysDemo();
         ArrayList<Student> strings = new ArrayList<>();
         strings.add(new Student("哈哈", 1));
@@ -21,7 +21,17 @@ public class Demo {
             Student next = iterator.next();
             next.setName("111111111");
         }
-        System.out.println(strings);
+
+       /* StringBuffer a = new StringBuffer("A");
+        StringBuffer b = new StringBuffer("B");
+        operate(a, b);
+        System.out.println(a +" "+b);*/
+    }
+
+    static void operate (StringBuffer a, StringBuffer b) {
+        a.append(b);
+        b = a;
+        b.append("C");
     }
 
     public static void arraysDemo() {
