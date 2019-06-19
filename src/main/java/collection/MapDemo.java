@@ -14,11 +14,25 @@ public class MapDemo {
 
         //hashMapDemo();
 
-        Hashtable<String, Student> stringStudentHashtable = new Hashtable<>();
-        stringStudentHashtable.put(null, new Student("又一", 1));
-        System.out.println(stringStudentHashtable);
     }
 
+    /**
+     * TreeMap
+     *
+     */
+    public static void treeMapDemo() {
+        // 到这里了
+        TreeMap<String, Student> stringStudentTreeMap = new TreeMap<>();
+
+    }
+
+    /**
+     * WeakHashMap
+     *
+     */
+    public static void weakHashMapDemo() {
+        WeakHashMap<String, Student> stringStudentWeakHashMap = new WeakHashMap<>();
+    }
 
     /**
      * HashTable
