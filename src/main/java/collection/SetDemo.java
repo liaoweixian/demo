@@ -4,6 +4,8 @@ import domain.Student;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  * 1、不包含重复元素e1.equals(e2)
