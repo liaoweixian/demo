@@ -17,7 +17,6 @@ public class SetDemo {
     public static void main(String[] args) {
         hashSetDemo();
     }
-
     /**
      * LinkedHashSet
      * 1、哈希表和链表实现了Set接口
