@@ -1,17 +1,49 @@
 import domain.Student;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Path;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Executors;
 
 public class Demo {
+    public static String ss ;
     public static void main(String[] args) {
+
+        TreeMap<String, String> stringStringTreeMap = new TreeMap<>();
+       /* BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        char c = ' ';
+        do {
+            try {
+                c = (char) bufferedReader.read();
+                System.out.println(c);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } while (c != 'q');*/
+
+        LinkedHashSet<Integer> integers = new LinkedHashSet<>();
+        /*String str = "abc";
+        String str2 = "a";
+        str2 += "bc";
+        String str3 = "a";
+        str3.concat("bc");
+        System.out.println(str == str2);
+        System.out.println(str == str3);
+        System.out.println(ss);*/
+
         //Demo.stringBufferDemo();
         //fileDemo();
         // pathDemo();
         //arraysDemo();
-        ArrayList<Student> strings = new ArrayList<>();
+        /*ArrayList<Student> strings = new ArrayList<>();
         strings.add(new Student("哈哈", 1));
         strings.add(new Student("wwww", 2));
         strings.add(new Student("eeee", 3));
@@ -20,12 +52,28 @@ public class Demo {
         while (iterator.hasNext()) {
             Student next = iterator.next();
             next.setName("111111111");
-        }
+        }*/
+       /* LocalDate now = LocalDate.now();
+        System.out.println(now);
+        LocalDate firstDate = now.with(TemporalAdjusters.firstDayOfMonth());
+        System.out.println(firstDate);
 
-       /* StringBuffer a = new StringBuffer("A");
-        StringBuffer b = new StringBuffer("B");
-        operate(a, b);
-        System.out.println(a +" "+b);*/
+        Date date = new Date();
+        System.out.println(date);
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+
+        String format = simpleDateFormat.format(date);
+        System.out.println(format);
+
+        System.out.println(TimeZone.getDefault().toString());
+        TimeZone aDefault = TimeZone.getTimeZone("America/Chicago");
+        TimeZone.setDefault(aDefault);
+        System.out.println(TimeZone.getDefault());
+        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        Date date1 = new Date();
+        String format1 = simpleDateFormat1.format(date1);
+        System.out.println(format1);*/
     }
 
     static void operate (StringBuffer a, StringBuffer b) {

@@ -2,6 +2,7 @@ package collection;
 
 import domain.Student;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -11,7 +12,7 @@ import java.util.function.Predicate;
  *
  * 学习List的主要实现集合 ArrayList、Vector、Stack、AbstractSequentialList、LinkedList
  */
-public class ListDemo {
+public class ListDemo implements Serializable {
 
     public static void main(String[] args) {
         //arrayListDemo();
