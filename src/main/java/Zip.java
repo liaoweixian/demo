@@ -60,21 +60,22 @@ public class Zip {
         unZip.close();
         out.close();
         String unZipStringObj = new String(bytes1);
+        System.out.println(unZipStringObj);
         return unZipStringObj;
     }
 
     public static void main(String[] args) throws IOException {
-         Map<String, Object> map = new HashMap<>();
-         map.put("id",1);
-         map.put("name","liaoweixian");
-         map.put("sex","男");
-         map.put("qq","男");
-         map.put("sewwx","男");
-
-        String s = JSONObject.toJSONString(map);
-        String zip = Zip.zip(s);
-        Zip.unZip(zip);
-        //Zip.text();
+//         Map<String, Object> map = new HashMap<>();
+//         map.put("id",1);
+//         map.put("name","liaoweixian");
+//         map.put("sex","男");
+//         map.put("qq","男");
+//         map.put("sewwx","男");
+//
+//        String s = JSONObject.toJSONString(map);
+//        String zip = Zip.zip(s);
+        String str = "H4sIAAAAAAAEAG1T0W6DIBR971csPs8F0Nbqd/RtWcwdUEuKYBC7NMv+fagtiNUQE889cO85HD9/d4lgSZVkeUYwcSt5d4jStKYXIeupRlB5zLBbuS9+A7U11Yy7MsII+0JndMeNvY+4B61oHREvOI2BdoUysHxqho8pKlNyPCFUTcufc6OqvgrFQueoFOYhi02DEvpZU4OUQYKlF6XnlgUqAO33Qbw23fM8HLqcDZ+QIBfu0TfVg7L32bbFdIx3MIOlf3xRgQ0TJlFJqE76MTzaX8A4ZO9P1z00k/IP3EpP050YpUdbmaZWm9gINZh+5Q1nwvZ2vpDgJAVFuYyZFhrHCcbdQAoWrrJMUZGi/PUqh05qiIgYpQSf8KFCZUXCxOMo27RDRfJFWsE0KxXj66FiCTu7Xs0yvBkkOG/uG1EZ+9fUxRqEGqO9tqoFFYNDz62gV25fBxq78B/YamO4UGdt6Aq+CSk32Lf2keA5WEslorfc1JFrOMWHN5JVeVFl2fJvZU+eB0FZ0XC1hDojaMSZc7TqPAXpge3+vv4BIPY2mVwEAAA=";
+        Zip.unZip(str);
     }
 
     public static void text() throws IOException {
