@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
@@ -17,63 +21,29 @@ public class Demo {
     public static String ss ;
     public static void main(String[] args) {
 
-        TreeMap<String, String> stringStringTreeMap = new TreeMap<>();
-       /* BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        char c = ' ';
-        do {
-            try {
-                c = (char) bufferedReader.read();
-                System.out.println(c);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } while (c != 'q');*/
+        /*Integer a = 1;
+        Integer b = 2;
+        Integer c = 3;
+        Integer d = 3;
+        Integer e = 321;
+        Integer f = 321;
+        Long g = 3l;
+        System.out.println("c == d :"+(c == d));
+        System.out.println("e == f :"+(e == f));
+        System.out.println("c == (a + b) :"+(c == (a + b)));
+        System.out.println("c.equals(a + b) :"+c.equals(a + b));
+        System.out.println("g == (a + b) :"+(g == (a + b)));
+        System.out.println("g.equals(a + b) :"+g.equals(a + b));*/
 
-        LinkedHashSet<Integer> integers = new LinkedHashSet<>();
-        /*String str = "abc";
-        String str2 = "a";
-        str2 += "bc";
-        String str3 = "a";
-        str3.concat("bc");
-        System.out.println(str == str2);
-        System.out.println(str == str3);
-        System.out.println(ss);*/
 
-        //Demo.stringBufferDemo();
-        //fileDemo();
-        // pathDemo();
-        //arraysDemo();
-        /*ArrayList<Student> strings = new ArrayList<>();
-        strings.add(new Student("哈哈", 1));
-        strings.add(new Student("wwww", 2));
-        strings.add(new Student("eeee", 3));
-        strings.add(new Student("rrrr", 4));
-        Iterator<Student> iterator = strings.iterator();
-        while (iterator.hasNext()) {
-            Student next = iterator.next();
-            next.setName("111111111");
-        }*/
-       /* LocalDate now = LocalDate.now();
-        System.out.println(now);
-        LocalDate firstDate = now.with(TemporalAdjusters.firstDayOfMonth());
-        System.out.println(firstDate);
 
-        Date date = new Date();
-        System.out.println(date);
+        System.out.println(LocalDateTime.now().getYear());
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String str = "2019-10-11 00:00:00";
+        LocalDateTime parse = LocalDateTime.parse(str, formatter);
+        System.out.println(parse);
 
-        String format = simpleDateFormat.format(date);
-        System.out.println(format);
-
-        System.out.println(TimeZone.getDefault().toString());
-        TimeZone aDefault = TimeZone.getTimeZone("America/Chicago");
-        TimeZone.setDefault(aDefault);
-        System.out.println(TimeZone.getDefault());
-        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
-        Date date1 = new Date();
-        String format1 = simpleDateFormat1.format(date1);
-        System.out.println(format1);*/
     }
 
     static void operate (StringBuffer a, StringBuffer b) {
