@@ -27,6 +27,7 @@ public class ReceiveLogs {
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
             System.out.println(" [x] Received '" + message + "'");
+
         };
         channel.basicConsume(queueName, true, deliverCallback, consumerTag -> { });
     }

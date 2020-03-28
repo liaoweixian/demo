@@ -15,6 +15,7 @@ import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 
 public class Demo {
@@ -36,13 +37,9 @@ public class Demo {
         System.out.println("g.equals(a + b) :"+g.equals(a + b));*/
 
 
+        final ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+        //map.put("key", "world");
 
-        System.out.println(LocalDateTime.now().getYear());
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String str = "2019-10-11 00:00:00";
-        LocalDateTime parse = LocalDateTime.parse(str, formatter);
-        System.out.println(parse);
 
     }
 
